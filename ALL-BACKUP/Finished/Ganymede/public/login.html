@@ -1,46 +1,39 @@
+<!-- login page designed by Caleb Badick, incorporated by Angela Dunwoodie-Lambert -->
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Login</title>
         <link rel="stylesheet" href="StyleSheet.css" styletype="text/css">
 
-        <!-- code to hit server for login ****need to get this working this weekend****-->
-        <!--  <script src="\node_modules\jquery\dist\jquery.min.js"></script>
+        <script src="\node_modules\jquery\dist\jquery.min.js"></script>
         <script>
             $(document).ready(function(){
                 var email,pass;
                 $("#submit").click(function(){
                     email=$("#email").val();
                     pass=$("#password").val();
+                    
                     /* Perform validation */
                     $.post("/login",{email:email,pass:pass},function(data){
                         if(data==='done'){
-                            window.location.href="/admin";
+                            window.location.href="/index.html";
                         }
                     });
                 });
             });
         </script>
-    -->
+
     </head>
     <body>
         <div class="center-div">
             <h3>Enter username and password</h3>
             <br>
-            <input type="text" size="40" placeholder="Enter your username" id="email"><br />
+            <input type="text" size="40" placeholder="Enter your email" id="email"><br />
             <input type="password" size="40" placeholder="Enter your password" id="password"><br />
             <br>
             <input type="button" value="Submit" id="submit" onclick=myFunction()>
         </div>
     </body>
-    <footer>
-        <script type="text/javascript">
-            var x = document.getElementById("submit");
-            
-            function myFunction(){
-                alert("Welcome back Travel Experts user!");
-                window.open("/index.html", "_self");
-            }
-        </script>
-    </footer>
+
 </html>

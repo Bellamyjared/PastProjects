@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <!---Web Designed By Brandon W Cuthbertson-->
+<!--Form.html was designed by Brandon cuthbertson-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -70,7 +71,7 @@
 <body>
     <div id="form">
 
-        <form id="Register" method="post" action="/submit-form" class="center">
+        <form id="Register" method="post" action="/register" class="center">
 
 
             Name: <br>
@@ -84,7 +85,7 @@
 
             <style>                #Country { width: 100px;
                 }
-              
+
             </style>
             <select id="Country" name="CustCountry"  onchange="toggle(this.value)">
                 <optgroup label="North America">
@@ -336,8 +337,8 @@
                     <option id="Oth" value="Zambia">Zambia</option>
                     <option id="Oth" value="Zimbabwe">Zimbabwe</option>
                 </optgroup>
-            
-                        
+
+
                 </select>
 
 
@@ -422,20 +423,14 @@
             <input type="tel" name="CustBusPhone" Placeholder="Business Phone" size="20" /><br />
             <label>Email:</label><br />
             <input type="Email" name="CustEmail" Placeholder="Email@Email.com" required="required" size="46" /><br>
-
-
-            <label for="Username">Username:</label><br />
-
-            <input type="text" name="UserID" id="Username" required="required" placeholder="Username" size="46" /><br />
-
-
             <label> Password: </label><br />
+
             <input type="Password" name="PassId" id="Password" required="required" placeholder="Password" size="20" onchange="setPasswordConfirmValidity()" />
             <input type="Password" name="PassId"id="Repeat_Password" required="required" placeholder="Repeat Password" size="20" onkeyup="setPasswordConfirmValidity()" /><br>
-           
 
-            
-            <br><input type="submit" value="Register" onclick="return confirm('Are You Sure')" /> <!---Button-->
+
+            <input type="submit" value="Submit"></input>
+            <!--- <br><input type="submit" value="Register" onclick="return confirm('Are You Sure')" />--> <!---Button-->
             <input type="reset" value="Reset" onclick="return confirm('Are You Sure')" /> <br>
 
 
