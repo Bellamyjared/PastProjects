@@ -1,0 +1,259 @@
+﻿<!-- designed by Jared (bootstrap edited by Jared)-->
+<!-- bootstrap and nav by Bradon -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Dropdown.css">
+    <link rel="stylesheet" href="StyleSheet.css">
+
+    <script src="dropdown.js"></script>
+    <script src="jquery.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <title>Travel Experts</title>
+
+    <style>
+        .row {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .myHeader {
+            background-color: rgba(26,26,26,0.6);
+            border-radius: 15px; /*Added-BC*/
+            color: #ededeb;
+        }
+
+        #MainHeading {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .myMain {
+            color: #1a1a1a;
+            background-color: rgba(255,255,255,0.6);
+            border-radius: 15px; /*Added-BC*/
+            min-height: 400px;
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            padding-left: 80px;
+            text-align: center;
+        }
+
+        .myFooter {
+            background-color: rgba(26,26,26,0.6);
+            border-radius: 15px; /*Added-BC*/
+            color: #ededeb;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        td{
+            color: white;
+            background-color: rgba(0,0,0,0.3);
+            border-bottom: 1px solid rgba(255,255,255,0.6);
+        }
+
+/*---------------- making the page more mobile friendly ------------------------------*/
+        @media only screen and (min-width: 768px) {
+            th{
+                font-size: 20px;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+            td{
+                font-size: 16px;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                color: white;
+                background-color: rgba(0,0,0,0.3);
+                border-bottom: 1px solid rgba(255,255,255,0.6);
+            }
+            table{
+                table-layout: auto;
+                width: 90%;
+            }
+            #codeHeader {
+                font-size: 35px;
+                font-weight: bold;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) {
+            th{
+                font-size: 26px;
+                
+                text-align: center;
+                padding-bottom: 10px;
+            }
+            td{
+                font-size: 16px;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                color: white;
+                background-color: rgba(0,0,0,0.3);
+                border-bottom: 1px solid rgba(255,255,255,0.6);
+            }
+            table{
+                table-layout: auto;
+                width: 90%;
+            }
+            #codeHeader {
+                font-size: 50px;
+            }
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <!------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------ Nav and Header -------------------------------------------->
+    <div class="container headercontainer">
+        <div class="row myHeader ">
+            <div class="col-sm-2">
+                <div class="dropdown">
+                    <img src="img/mathew-maddison-altair-corporations-04.jpg" class="downlogo" id="logo" onclick="myFunction()" style="border-radius: 50%;" alt="Avatar" height="100px" width="100px" />
+
+                    <div id="Menu">
+                        <img src="img/3bar.png" id="bars" alt="menu" class="downlogo" onclick="myFunction()" />
+                    </div>
+
+                    <div id="myDropdown" class="dropdown-content">
+                        <a id="index" href="Index.html">Home</a><br>
+                        <a id="contact" href="/contact">Contact Us</a><br>
+                        <a id="register" href="register.html">Register Account</a><br>
+                        <a id="packages" href="packages.html">Travel Packages</a>
+                        <a id="Login" href="login.html" class="button">Log in</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-10">
+                <h1 id="MainHeading">Travel Experts</h1>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------END nav and header------------------------------------------>
+    <!----------------------------------------------------------------------------------------------------->
+
+    <div class="container">
+        <div class="row"><br /></div>
+    </div>
+    <!----------------------------------------------------------------------------------------------->
+    <!-------------------------------------------Contact body------------------------------------------->
+    <div class="container">
+        <div class="row justify-content-end ">
+            <div class="col-sm-10 myMain">
+                <myagents>
+                    <h4 id="codeHeader">AGENTS</h4>
+
+                    <table id="agentsTable">
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Phone</th>
+                            <th>Email Address</th>                    
+                        </tr>
+                    </table>
+
+                </myagent>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------END Contact body-------------------------------------->
+    <!----------------------------------------------------------------------------------------------->
+
+    <!-- bootstrap requirements -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+<footer>
+<!----------------------------------------------------------------------------------------------->
+<!------------------------------------------Page Footer------------------------------------------>
+
+    <div class="container">
+        <div class="row myFooter ">
+            <div class="col-sm-4">
+                <p>Copyright &copy; Group 2</p>
+            </div>
+        </div>
+
+        <div class="row myFooter ">
+            <div class="col-sm-4">
+                <p style=" color: rgba(237, 237, 235 , 0.6);">
+                    Disclaimer: No Programmers were hurt in the developing of this website. Caleb Badick, Jared Bellamy, Brandon Cuthbertson and Angela Lambert are all perfectly fine, they definitely are fine, there is no need to check on them, they are fine. If you see the Police, please make sure they know that. Be perfectly clear they are fine, and Travel Experts had nothing to do with it. Better yet, don't bring it up, and don't mention Travel Experts, or the OOSD course at SAIT.
+                </p>
+            </div>
+        </div>
+
+    </div>
+<!------------------------------------------END Footer------------------------------------------>
+<!----------------------------------------------------------------------------------------------->
+
+   
+   <!-- script for contact body -->
+   <!-- based off Angela's source code -->
+    <script type="text/javascript" language="javascript">
+        //Call web service to fetch back packages
+        var client = new XMLHttpRequest();
+        client.overrideMimeType("application/json");
+
+        client.onload = function () {
+            // in case of network errors this might not give reliable results
+            if (this.readyState == 4 && this.status == 200) {
+                buildTable(this.response);
+            }
+        }
+
+        client.open('GET', '/service/agents');
+        client.send();
+
+        //Building the agentsTable
+       function buildTable(json) {
+            var myResults = JSON.parse(json);
+            console.log(myResults);
+
+            for (const myResult of myResults) {
+                var table = document.getElementById("agentsTable");
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+
+    
+                var FnameCell = row.insertCell(0);
+                var FnameElement = document.createTextNode(myResults[rowCount - 1].AgtFirstName);
+                FnameCell.appendChild(FnameElement);
+
+                var LnameCell = row.insertCell(1);
+                var LnameElement = document.createTextNode(myResults[rowCount - 1].AgtLastName);
+                LnameCell.appendChild(LnameElement);
+
+                var phoneCell = row.insertCell(2);
+                var phoneElement = document.createTextNode(myResults[rowCount - 1].AgtBusPhone);
+                phoneCell.appendChild(phoneElement);
+
+                var emailCell = row.insertCell(3);
+                var emailElement = document.createTextNode(myResults[rowCount - 1].AgtEmail);
+                emailCell.appendChild(emailElement);
+            }
+        }
+    </script>
+</footer>
+</html>

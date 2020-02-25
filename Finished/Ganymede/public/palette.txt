@@ -1,0 +1,18 @@
+/* Coolors Exported Palette - coolors.co/5567f7-095aff-3b4c45-2950d6-cfcec9 */
+
+/* HSL */
+$color1: hsla(233%, 91%, 65%, 1);
+$color2: hsla(220%, 100%, 52%, 1);
+$color3: hsla(155%, 13%, 26%, 1);
+$color4: hsla(226%, 68%, 50%, 1);
+$color5: hsla(50%, 6%, 80%, 1);
+
+/* RGB */
+$color1: rgba(85, 103, 247, 1);
+$color2: rgba(9, 90, 255, 1);
+$color3: rgba(59, 76, 69, 1);
+$color4: rgba(41, 80, 214, 1);
+$color5: rgba(207, 206, 201, 1);
+
+
+

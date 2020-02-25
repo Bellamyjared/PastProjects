@@ -1,0 +1,3 @@
+NOTE
+==========
+We customized the database, please load the custom one before you use the register page

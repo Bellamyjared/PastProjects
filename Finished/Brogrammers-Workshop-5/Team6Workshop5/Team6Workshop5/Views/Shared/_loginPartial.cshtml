@@ -1,0 +1,55 @@
+﻿@*partial view of nav barr for  user not logged in*@
+@if (Session["UserID"] == null)
+
+{<ul class="nav navbar-nav">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+
+        <li>@Html.ActionLink("Your Account", "Login", "Customer")</li>
+        <li>
+            @Html.ActionLink("Register", "Create", "Customer", null, null)
+        </li>
+
+        <li>
+            @Html.ActionLink("Login", "Login", "Customer", null, null)
+        </li>
+    </ul>
+
+}
+@*partial view of nav barr for  user  logged in*@
+
+else
+{
+
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+
+        <li>
+            @Html.ActionLink("Hello " + Session["CustFirstName"], "Index", "Customer", null, null)
+        </li>
+        <li>
+            @Html.ActionLink("Your Bookings", "CustomerBookings", "Customer")
+        </li>
+
+        <li>@Html.ActionLink("Your Account", "Index", "Customer")</li>
+
+        <li>
+            @Html.ActionLink("Logout", "Logout", "Customer", null, null)
+        </li>
+    </ul>
+
+}
+

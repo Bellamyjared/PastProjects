@@ -1,0 +1,114 @@
+﻿<!-- Reciept.html designed by Angela Dunwoodie-Lambert -->
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Reciept</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #eee;">
+                <div class="w-75 p-3">
+                    <div receipt align="right">
+                        <h1>Travel Experts</h1>
+                        <h3>Reciept</h3>
+                        <h4>Invoice #</h4>
+                        <br />
+                        <br />
+                        <hr width:5px; color:black; />
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div purchase>
+                    <table width="100%" id="pkgTable">
+                        <th width="30%" text-align="left">Package Name</th>
+                        <th width="40%" text-align="left">Description</th>
+                        <th width="20%" style="text-align: right;">Package Price</th>
+
+                    </table>
+                    <div align="right" width="20%">
+                        <br />
+                        <script> 
+                            gstValue = package.PkgBasePrice * .05;
+                            totalPrice = package.PkgBasePrice + gstValue;
+                        </script>
+                            <table width="100%" id="gstTable" align="right">
+                        
+                            <th width="70%" text-align="left">GST</th>
+                            <th width="30%" text-align="left">140</th>
+
+                        </table>
+                        ___________________
+                    </div>
+                    <div>
+                        <table width="100%" id="gstTable">
+                            <th width="70%" text-align="right">TOTAL</th>
+                            <th width="30%" text-align="right">2940</th>
+                        </table>
+                    </div>
+
+                    <div align="right">
+                        =================
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <script type="text/javascript" language="javascript">
+        //Call web service to fetch back packages
+        var client = new XMLHttpRequest();
+        client.overrideMimeType("application/json");
+
+        client.onload = function () {
+            // in case of network errors this might not give reliable results
+            if (this.readyState == 4 && this.status == 200) {
+                buildTable(this.response);
+            }
+        }
+
+        var url = new URL(window.location.href);
+        var pkgId = url.searchParams.get("packageId");
+        client.open('GET', '/service/packages/' + pkgId);
+        client.send();
+
+        var gstValue = 0;
+        var totalPrice = 0;
+
+        //Build the table
+        function buildTable(json) {
+            console.log(json);
+            var package = JSON.parse(json)[0];
+
+                var table = document.getElementById("pkgTable");
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+
+                var nameCell = row.insertCell(0);
+                var nameElement = document.createTextNode(package.PkgName);
+                nameCell.appendChild(nameElement);
+
+                var descCell = row.insertCell(1);
+                var descElement = document.createTextNode(package.PkgDesc);
+                descCell.appendChild(descElement);
+
+                var priceCell = row.insertCell(2);
+                var priceElement = document.createTextNode("$" + package.PkgBasePrice);
+                priceCell.style.textAlign="right";
+                priceCell.appendChild(priceElement);
+
+            
+
+        }
+    </script>
+    <button onclick="window.print();return false;">Print Reciept</button>
+</footer>
+</html>

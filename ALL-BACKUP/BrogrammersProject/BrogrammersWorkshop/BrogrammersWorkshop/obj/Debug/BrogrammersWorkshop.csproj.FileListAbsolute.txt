@@ -1,0 +1,8 @@
+C:\Users\820160\Documents\GitHub\BrogrammersProject\BrogrammersWorkshop\BrogrammersWorkshop\bin\Debug\BrogrammersWorkshop.exe.config
+C:\Users\820160\Documents\GitHub\BrogrammersProject\BrogrammersWorkshop\BrogrammersWorkshop\bin\Debug\BrogrammersWorkshop.exe
+C:\Users\820160\Documents\GitHub\BrogrammersProject\BrogrammersWorkshop\BrogrammersWorkshop\bin\Debug\BrogrammersWorkshop.pdb
+C:\Users\820160\Documents\GitHub\BrogrammersProject\BrogrammersWorkshop\BrogrammersWorkshop\obj\Debug\BrogrammersWorkshop.csprojAssemblyReference.cache
+C:\Users\820160\Documents\GitHub\BrogrammersProject\BrogrammersWorkshop\BrogrammersWorkshop\obj\Debug\BrogrammersWorkshop.Properties.Resources.resources
+C:\Users\820160\Documents\GitHub\BrogrammersProject\BrogrammersWorkshop\BrogrammersWorkshop\obj\Debug\BrogrammersWorkshop.csproj.GenerateResource.cache
+C:\Users\820160\Documents\GitHub\BrogrammersProject\BrogrammersWorkshop\BrogrammersWorkshop\obj\Debug\BrogrammersWorkshop.exe
+C:\Users\820160\Documents\GitHub\BrogrammersProject\BrogrammersWorkshop\BrogrammersWorkshop\obj\Debug\BrogrammersWorkshop.pdb

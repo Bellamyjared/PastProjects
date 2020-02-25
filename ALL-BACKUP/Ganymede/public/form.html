@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<!---Web Designed By Brandon W Cuthbertson-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript"></script>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="StyleSheet.css">
+    <script>
+        var Password = document.getElementById("Password");
+        var Repeat_Password = document.getElementById("Repeat_Password");
+
+        function validatePassword() {
+
+
+
+            if (Password.value != Repeat_Password.value) {
+                Repeat_Password.setCustomValidity("Passwords Don't Match");
+                return false;
+                cosole.log("Good Password");
+
+            } else {
+                Repeat_Password.setCustomValidity('');
+                cosole.log("Bad Password");
+            }
+        }
+
+
+    </script>
+
+
+    <style>
+
+
+        #form {
+            padding: 20px;
+        }
+
+        .formSize {
+            width: 100px;
+        }
+
+        #Register {
+            margin: 0 auto;
+            width: 800px;
+            border-radius: 25px;
+            padding: 30px;
+            background-color: rgba(0,0,0,0.3);
+        }
+
+        input[type=text]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+    </style>
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+    <div id="form">
+
+        <form id="Register" method="post" action="/submit-form" class="center">
+
+
+            Name: <br>
+            <input type="text" name="CustFirstName" Placeholder="First Name" required="required" size="20" autofocus />
+            <input type="text" name="CustLastName" Placeholder="Last Name" required="required" size="20" /><br>
+            Address:<br>
+            <input type="text" name="CustAddress" Placeholder="123 Street Place NE" required="required" size="20" />
+            <input type="text" name="CustCity" Placeholder="City" required="required" size="20" /><br><br>
+            <input type="text" name="CustPostal" Placeholder="Z0Z 0Z0" size="6" pattern="^(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$)" required="required" />
+
+
+            <style>                #Country { width: 100px;
+                }
+              
+            </style>
+            <select id="Country" name="CustCountry"  onchange="toggle(this.value)">
+                <optgroup label="North America">
+                    <option id="Canada" value="Canada" >Canada</option>
+                    <option id="USA" value="USA">USA</option>
+                </optgroup>
+                <optgroup label="Other">
+                    <!----------------------------------------------------------------><!--Other--><!---Thanks https://gist.github.com/danrovito/977bcb97c9c2dfd3398a-->
+                    <option id="Oth" value="Afghanistan">Afghanistan</option>
+                    <option id="Oth" value="Åland Islands">Åland Islands</option>
+                    <option id="Oth" value="Albania">Albania</option>
+                    <option id="Oth" value="Algeria">Algeria</option>
+                    <option id="Oth" value="American Samoa">American Samoa</option>
+                    <option id="Oth" value="Andorra">Andorra</option>
+                    <option id="Oth" value="Angola">Angola</option>
+                    <option id="Oth" value="Anguilla">Anguilla</option>
+                    <option id="Oth" value="Antarctica">Antarctica</option>
+                    <option id="Oth" value="Antigua and Barbuda">Antigua and Barbuda</option>
+                    <option id="Oth" value="Argentina">Argentina</option>
+                    <option id="Oth" value="Armenia">Armenia</option>
+                    <option id="Oth" value="Aruba">Aruba</option>
+                    <option id="Oth" value="Australia">Australia</option>
+                    <option id="Oth" value="Austria">Austria</option>
+                    <option id="Oth" value="Azerbaijan">Azerbaijan</option>
+                    <option id="Oth" value="Bahamas">Bahamas</option>
+                    <option id="Oth" value="Bahrain">Bahrain</option>
+                    <option id="Oth" value="Bangladesh">Bangladesh</option>
+                    <option id="Oth" value="Barbados">Barbados</option>
+                    <option id="Oth" value="Belarus">Belarus</option>
+                    <option id="Oth" value="Belgium">Belgium</option>
+                    <option id="Oth" value="Belize">Belize</option>
+                    <option id="Oth" value="Benin">Benin</option>
+                    <option id="Oth" value="Bermuda">Bermuda</option>
+                    <option id="Oth" value="Bhutan">Bhutan</option>
+                    <option id="Oth" value="Bolivia">Bolivia</option>
+                    <option id="Oth" value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                    <option id="Oth" value="Botswana">Botswana</option>
+                    <option id="Oth" value="Bouvet Island">Bouvet Island</option>
+                    <option id="Oth" value="Brazil">Brazil</option>
+                    <option id="Oth" value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                    <option id="Oth" value="Brunei Darussalam">Brunei Darussalam</option>
+                    <option id="Oth" value="Bulgaria">Bulgaria</option>
+                    <option id="Oth" value="Burkina Faso">Burkina Faso</option>
+                    <option id="Oth" value="Burundi">Burundi</option>
+                    <option id="Oth" value="Cambodia">Cambodia</option>
+                    <option id="Oth" value="Cameroon">Cameroon</option>
+                    <option id="Oth" value="Cape Verde">Cape Verde</option>
+                    <option id="Oth" value="Cayman Islands">Cayman Islands</option>
+                    <option id="Oth" value="Central African Republic">Central African Republic</option>
+                    <option id="Oth" value="Chad">Chad</option>
+                    <option id="Oth" value="Chile">Chile</option>
+                    <option id="Oth" value="China">China</option>
+                    <option id="Oth" value="Christmas Island">Christmas Island</option>
+                    <option id="Oth" value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                    <option id="Oth" value="Colombia">Colombia</option>
+                    <option id="Oth" value="Comoros">Comoros</option>
+                    <option id="Oth" value="Congo">Congo</option>
+                    <option id="Oth" value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                    <option id="Oth" value="Cook Islands">Cook Islands</option>
+                    <option id="Oth" value="Costa Rica">Costa Rica</option>
+                    <option id="Oth" value="Cote D'ivoire">Cote D'ivoire</option>
+                    <option id="Oth" value="Croatia">Croatia</option>
+                    <option id="Oth" value="Cuba">Cuba</option>
+                    <option id="Oth" value="Cyprus">Cyprus</option>
+                    <option id="Oth" value="Czech Republic">Czech Republic</option>
+                    <option id="Oth" value="Denmark">Denmark</option>
+                    <option id="Oth" value="Djibouti">Djibouti</option>
+                    <option id="Oth" value="Dominica">Dominica</option>
+                    <option id="Oth" value="Dominican Republic">Dominican Republic</option>
+                    <option id="Oth" value="Ecuador">Ecuador</option>
+                    <option id="Oth" value="Egypt">Egypt</option>
+                    <option id="Oth" value="El Salvador">El Salvador</option>
+                    <option id="Oth" value="Equatorial Guinea">Equatorial Guinea</option>
+                    <option id="Oth" value="Eritrea">Eritrea</option>
+                    <option id="Oth" value="Estonia">Estonia</option>
+                    <option id="Oth" value="Ethiopia">Ethiopia</option>
+                    <option id="Oth" value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                    <option id="Oth" value="Faroe Islands">Faroe Islands</option>
+                    <option id="Oth" value="Fiji">Fiji</option>
+                    <option id="Oth" value="Finland">Finland</option>
+                    <option id="Oth" value="France">France</option>
+                    <option id="Oth" value="French Guiana">French Guiana</option>
+                    <option id="Oth" value="French Polynesia">French Polynesia</option>
+                    <option id="Oth" value="French Southern Territories">French Southern Territories</option>
+                    <option id="Oth" value="Gabon">Gabon</option>
+                    <option id="Oth" value="Gambia">Gambia</option>
+                    <option id="Oth" value="Georgia">Georgia</option>
+                    <option id="Oth" value="Germany">Germany</option>
+                    <option id="Oth" value="Ghana">Ghana</option>
+                    <option id="Oth" value="Gibraltar">Gibraltar</option>
+                    <option id="Oth" value="Greece">Greece</option>
+                    <option id="Oth" value="Greenland">Greenland</option>
+                    <option id="Oth" value="Grenada">Grenada</option>
+                    <option id="Oth" value="Guadeloupe">Guadeloupe</option>
+                    <option id="Oth" value="Guam">Guam</option>
+                    <option id="Oth" value="Guatemala">Guatemala</option>
+                    <option id="Oth" value="Guernsey">Guernsey</option>
+                    <option id="Oth" value="Guinea">Guinea</option>
+                    <option id="Oth" value="Guinea-bissau">Guinea-bissau</option>
+                    <option id="Oth" value="Guyana">Guyana</option>
+                    <option id="Oth" value="Haiti">Haiti</option>
+                    <option id="Oth" value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                    <option id="Oth" value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                    <option id="Oth" value="Honduras">Honduras</option>
+                    <option id="Oth" value="Hong Kong">Hong Kong</option>
+                    <option id="Oth" value="Hungary">Hungary</option>
+                    <option id="Oth" value="Iceland">Iceland</option>
+                    <option id="Oth" value="India">India</option>
+                    <option id="Oth" value="Indonesia">Indonesia</option>
+                    <option id="Oth" value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                    <option id="Oth" value="Iraq">Iraq</option>
+                    <option id="Oth" value="Ireland">Ireland</option>
+                    <option id="Oth" value="Isle of Man">Isle of Man</option>
+                    <option id="Oth" value="Israel">Israel</option>
+                    <option id="Oth" value="Italy">Italy</option>
+                    <option id="Oth" value="Jamaica">Jamaica</option>
+                    <option id="Oth" value="Japan">Japan</option>
+                    <option id="Oth" value="Jersey">Jersey</option>
+                    <option id="Oth" value="Jordan">Jordan</option>
+                    <option id="Oth" value="Kazakhstan">Kazakhstan</option>
+                    <option id="Oth" value="Kenya">Kenya</option>
+                    <option id="Oth" value="Kiribati">Kiribati</option>
+                    <option id="Oth" value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                    <option id="Oth" value="Korea, Republic of">Korea, Republic of</option>
+                    <option id="Oth" value="Kuwait">Kuwait</option>
+                    <option id="Oth" value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option id="Oth" value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                    <option id="Oth" value="Latvia">Latvia</option>
+                    <option id="Oth" value="Lebanon">Lebanon</option>
+                    <option id="Oth" value="Lesotho">Lesotho</option>
+                    <option id="Oth" value="Liberia">Liberia</option>
+                    <option id="Oth" value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                    <option id="Oth" value="Liechtenstein">Liechtenstein</option>
+                    <option id="Oth" value="Lithuania">Lithuania</option>
+                    <option id="Oth" value="Luxembourg">Luxembourg</option>
+                    <option id="Oth" value="Macao">Macao</option>
+                    <option id="Oth" value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                    <option id="Oth" value="Madagascar">Madagascar</option>
+                    <option id="Oth" value="Malawi">Malawi</option>
+                    <option id="Oth" value="Malaysia">Malaysia</option>
+                    <option id="Oth" value="Maldives">Maldives</option>
+                    <option id="Oth" value="Mali">Mali</option>
+                    <option id="Oth" value="Malta">Malta</option>
+                    <option id="Oth" value="Marshall Islands">Marshall Islands</option>
+                    <option id="Oth" value="Martinique">Martinique</option>
+                    <option id="Oth" value="Mauritania">Mauritania</option>
+                    <option id="Oth" value="Mauritius">Mauritius</option>
+                    <option id="Oth" value="Mayotte">Mayotte</option>
+                    <option id="Oth" value="Mexico">Mexico</option>
+                    <option id="Oth" value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                    <option id="Oth" value="Moldova, Republic of">Moldova, Republic of</option>
+                    <option id="Oth" value="Monaco">Monaco</option>
+                    <option id="Oth" value="Mongolia">Mongolia</option>
+                    <option id="Oth" value="Montenegro">Montenegro</option>
+                    <option id="Oth" value="Montserrat">Montserrat</option>
+                    <option id="Oth" value="Morocco">Morocco</option>
+                    <option id="Oth" value="Mozambique">Mozambique</option>
+                    <option id="Oth" value="Myanmar">Myanmar</option>
+                    <option id="Oth" value="Namibia">Namibia</option>
+                    <option id="Oth" value="Nauru">Nauru</option>
+                    <option id="Oth" value="Nepal">Nepal</option>
+                    <option id="Oth" value="Netherlands">Netherlands</option>
+                    <option id="Oth" value="Netherlands Antilles">Netherlands Antilles</option>
+                    <option id="Oth" value="New Caledonia">New Caledonia</option>
+                    <option id="Oth" value="New Zealand">New Zealand</option>
+                    <option id="Oth" value="Nicaragua">Nicaragua</option>
+                    <option id="Oth" value="Niger">Niger</option>
+                    <option id="Oth" value="Nigeria">Nigeria</option>
+                    <option id="Oth" value="Niue">Niue</option>
+                    <option id="Oth" value="Norfolk Island">Norfolk Island</option>
+                    <option id="Oth" value="Northern Mariana Islands">Northern Mariana Islands</option>
+                    <option id="Oth" value="Norway">Norway</option>
+                    <option id="Oth" value="Oman">Oman</option>
+                    <option id="Oth" value="Pakistan">Pakistan</option>
+                    <option id="Oth" value="Palau">Palau</option>
+                    <option id="Oth" value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                    <option id="Oth" value="Panama">Panama</option>
+                    <option id="Oth" value="Papua New Guinea">Papua New Guinea</option>
+                    <option id="Oth" value="Paraguay">Paraguay</option>
+                    <option id="Oth" value="Peru">Peru</option>
+                    <option id="Oth" value="Philippines">Philippines</option>
+                    <option id="Oth" value="Pitcairn">Pitcairn</option>
+                    <option id="Oth" value="Poland">Poland</option>
+                    <option id="Oth" value="Portugal">Portugal</option>
+                    <option id="Oth" value="Puerto Rico">Puerto Rico</option>
+                    <option id="Oth" value="Qatar">Qatar</option>
+                    <option id="Oth" value="Reunion">Reunion</option>
+                    <option id="Oth" value="Romania">Romania</option>
+                    <option id="Oth" value="Russian Federation">Russian Federation</option>
+                    <option id="Oth" value="Rwanda">Rwanda</option>
+                    <option id="Oth" value="Saint Helena">Saint Helena</option>
+                    <option id="Oth" value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                    <option id="Oth" value="Saint Lucia">Saint Lucia</option>
+                    <option id="Oth" value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                    <option id="Oth" value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                    <option id="Oth" value="Samoa">Samoa</option>
+                    <option id="Oth" value="San Marino">San Marino</option>
+                    <option id="Oth" value="Sao Tome and Principe">Sao Tome and Principe</option>
+                    <option id="Oth" value="Saudi Arabia">Saudi Arabia</option>
+                    <option id="Oth" value="Senegal">Senegal</option>
+                    <option id="Oth" value="Serbia">Serbia</option>
+                    <option id="Oth" value="Seychelles">Seychelles</option>
+                    <option id="Oth" value="Sierra Leone">Sierra Leone</option>
+                    <option id="Oth" value="Singapore">Singapore</option>
+                    <option id="Oth" value="Slovakia">Slovakia</option>
+                    <option id="Oth" value="Slovenia">Slovenia</option>
+                    <option id="Oth" value="Solomon Islands">Solomon Islands</option>
+                    <option id="Oth" value="Somalia">Somalia</option>
+                    <option id="Oth" value="South Africa">South Africa</option>
+                    <option id="Oth" value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                    <option id="Oth" value="Spain">Spain</option>
+                    <option id="Oth" value="Sri Lanka">Sri Lanka</option>
+                    <option id="Oth" value="Sudan">Sudan</option>
+                    <option id="Oth" value="Suriname">Suriname</option>
+                    <option id="Oth" value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                    <option id="Oth" value="Swaziland">Swaziland</option>
+                    <option id="Oth" value="Sweden">Sweden</option>
+                    <option id="Oth" value="Switzerland">Switzerland</option>
+                    <option id="Oth" value="Syrian Arab Republic">Syrian Arab Republic</option>
+                    <option id="Oth" value="Taiwan, Province of China">Taiwan, Province of China</option>
+                    <option id="Oth" value="Tajikistan">Tajikistan</option>
+                    <option id="Oth" value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                    <option id="Oth" value="Thailand">Thailand</option>
+                    <option id="Oth" value="Timor-leste">Timor-leste</option>
+                    <option id="Oth" value="Togo">Togo</option>
+                    <option id="Oth" value="Tokelau">Tokelau</option>
+                    <option id="Oth" value="Tonga">Tonga</option>
+                    <option id="Oth" value="Trinidad and Tobago">Trinidad and Tobago</option>
+                    <option id="Oth" value="Tunisia">Tunisia</option>
+                    <option id="Oth" value="Turkey">Turkey</option>
+                    <option id="Oth" value="Turkmenistan">Turkmenistan</option>
+                    <option id="Oth" value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                    <option id="Oth" value="Tuvalu">Tuvalu</option>
+                    <option id="Oth" value="Uganda">Uganda</option>
+                    <option id="Oth" value="Ukraine">Ukraine</option>
+                    <option id="Oth" value="United Arab Emirates">United Arab Emirates</option>
+                    <option id="Oth" value="United Kingdom">United Kingdom</option>
+                    <option id="Oth" value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                    <option id="Oth" value="Uruguay">Uruguay</option>
+                    <option id="Oth" value="Uzbekistan">Uzbekistan</option>
+                    <option id="Oth" value="Vanuatu">Vanuatu</option>
+                    <option id="Oth" value="Venezuela">Venezuela</option>
+                    <option id="Oth" value="Viet Nam">Viet Nam</option>
+                    <option id="Oth" value="Virgin Islands, British">Virgin Islands, British</option>
+                    <option id="Oth" value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                    <option id="Oth" value="Wallis and Futuna">Wallis and Futuna</option>
+                    <option id="Oth" value="Western Sahara">Western Sahara</option>
+                    <option id="Oth" value="Yemen">Yemen</option>
+                    <option id="Oth" value="Zambia">Zambia</option>
+                    <option id="Oth" value="Zimbabwe">Zimbabwe</option>
+                </optgroup>
+            
+                        
+                </select>
+
+
+
+            <!----------------------------------------------------------------><!--Can-->
+            <select name="CustProv" class="formSize">
+
+                <option id="prov" value="No">Other</option>
+                <optgroup label="Canada">
+                    <!---cant figure out how to hide vaules without doing multiple tables? Databse wont support having multiple tables-->
+                    <option id="prov" value="Alberta">AB</option>
+                    <option id="prov" value="British Columbia">BC</option>
+                    <option id="prov" value="Manitoba">MB</option>
+                    <option id="prov" value="New Brunswick">NB</option>
+                    <option id="prov" value="New Foundland and Labrador">NL</option>
+                    <option id="prov" value="Nova Scotia">NS</option>
+                    <option id="prov" value="Ontario">ON</option>
+                    <option id="prov" value="Prince Edward Island">PE</option>
+                    <option id="prov" value="Quebec">QC</option>
+                    <option id="prov" value="Saskatchewan">SK</option>
+                    </optgroup>
+                    <optgroup label="USA">
+                        <!---cant figure out how to hide vaules without doing multiple tables? Databse wont support having multiple tables-->
+                        <!----------------------------------------------------------------><!--USA-->
+                        <option id="state" value="Alabama">AL</option>
+                        <option id="state" value="Alaska">AK</option>
+                        <option id="state" value="Arizona">Az</option>
+                        <option id="state" value="Arkansas ">AR</option>
+                        <option id="state" value="California ">CA</option>
+                        <option id="state" value="Colorado">CO</option>
+                        <option id="state" value="Connecticut ">CT</option>
+                        <option id="state" value="Delaware">DE</option>
+                        <option id="state" value="Florida">FL</option>
+                        <option id="state" value="Georgia">GA</option>
+                        <option id="state" value="Hawaii">HI</option>
+                        <option id="state" value="Idaho">ID</option>
+                        <option id="state" value="Illinois">IL</option>
+                        <option id="state" value="Indiana">IN</option>
+                        <option id="state" value="Iowa">IA</option>
+                        <option id="state" value="Kansas">KS</option>
+                        <option id="state" value="Kentucky">KY</option>
+                        <option id="state" value="Louisiana">LA</option>
+                        <option id="state" value="Massachusetts">MA</option>
+                        <option id="state" value="Michigan">MI</option>
+                        <option id="state" value="Minnesota">MN</option>
+                        <option id="state" value="Mississippi">MS</option>
+                        <option id="state" value="Missouri">MO</option>
+                        <option id="state" value="Montana">MT</option>
+                        <option id="state" value="Nebraska">NB</option>
+                        <option id="state" value="Nevada">NV</option>
+                        <option id="state" value="New Hampshire">NH</option>
+                        <option id="state" value="New Jersey">NJ</option>
+                        <option id="state" value="New Mexico">NM</option>
+                        <option id="state" value="New York">NY</option>
+                        <option id="state" value="North Carolina">NC</option>
+                        <option id="state" value="North Dakota">ND</option>
+                        <option id="state" value="Ohio">OH</option>
+                        <option id="state" value="Oregon">OR</option>
+                        <option id="state" value="Pennsylvania">PA</option>
+                        <option id="state" value="Rhode Isand">RI</option>
+                        <option id="state" value="South Carolina">SC</option>
+                        <option id="state" value="South Dakota">SD</option>
+                        <option id="state" value="Tennessee">TN</option>
+                        <option id="state" value="Texas">TX</option>
+                        <option id="state" value="Utah">UT</option>
+                        <option id="state" value="Vermont">VT</option>
+                        <option id="state" value="Virginia">VA</option>
+                        <option id="state" value="Washington">WA</option>
+                        <option id="state" value="West Verginia">WV</option>
+                        <option id="state" value="Wisconsin">WI</option>
+                        <option id="state" value="Wyoming">WY</option>
+                        </optgroup>
+                        <!----------------------------------------------------------------><!--Other-->
+
+</select>
+
+
+            <br />
+            <label>Home Phone:</label><br />
+            <input type="tel" name="CustHomePhone" Placeholder="Home Phone" size="20" /><br />
+            <label>Business Phone:</label><br>
+            <input type="tel" name="CustBusPhone" Placeholder="Business Phone" size="20" /><br />
+            <label>Email:</label><br />
+            <input type="Email" name="CustEmail" Placeholder="Email@Email.com" required="required" size="46" /><br>
+
+
+            <label for="Username">Username:</label><br />
+
+            <input type="text" name="UserID" id="Username" required="required" placeholder="Username" size="46" /><br />
+
+
+            <label> Password: </label><br />
+            <input type="Password" name="PassId" id="Password" required="required" placeholder="Password" size="20" onchange="setPasswordConfirmValidity()" />
+            <input type="Password" name="PassId"id="Repeat_Password" required="required" placeholder="Repeat Password" size="20" onkeyup="setPasswordConfirmValidity()" /><br>
+           
+
+            
+            <br><input type="submit" value="Register" onclick="return confirm('Are You Sure')" /> <!---Button-->
+            <input type="reset" value="Reset" onclick="return confirm('Are You Sure')" /> <br>
+
+
+
+        </form>
+        <script>
+            function setPasswordConfirmValidity(str) {
+                const password1 = document.getElementById('Password');
+                const Repeat_Password = document.getElementById('Repeat_Password');
+                console.log(password1 + "Called");
+                console.log(Repeat_Password + "Called");
+
+                if (password1.value === Repeat_Password.value) {
+                    Repeat_Password.setCustomValidity('');
+                } else {
+                    Repeat_Password.setCustomValidity('Passwords must match');
+                }
+                console.log('Repeat_Password customError ', document.getElementById('Repeat_Password').validity.customError);
+                console.log('Repeat_Password validationMessage ', document.getElementById('Repeat_Password').validationMessage);
+            }
+        </script>
+    </div>
+</body>
+</html>
+<!---Web Designed By Brandon W Cuthbertson-->
